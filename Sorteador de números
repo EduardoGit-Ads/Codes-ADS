@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Ex4{
+    public static void main(String[] args) throws Exception {
+    Scanner ler = new Scanner(System.in);
+
+    System.out.println("Escolha entre 1, 2, 3 e 4");
+    int opcao = ler.nextInt();
+
+    if (opcao == 1){
+        System.out.println("Você ganhou uma casa");
+    }
+    else if (opcao == 2){
+        System.out.println("Você ganhou uma viajem");
+    }
+    else if (opcao == 3){
+        System.out.println("Você ganhou um avião");
+    }
+    else {
+        System.out.println("Você ganhou um AP");
+    }
+    }
+}
