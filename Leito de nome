@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Qual seu nome?");
+        String nome = ler.nextLine();
+
+        System.out.println("Olá, seja bem-vindo " + nome);
+
+        System.out.println("Qual é seu hobbie? ");
+        String hobbie = ler.nextLine();
+
+        System.out.println("Gostei do teu hobbie eu tambem gosto de " + hobbie);
+
+        System.out.println("E em qual cidade você mora?");
+        String cidade = ler.nextLine();
+        System.out.println("Eu sou dessa cidade tambem, sou de" + cidade);
+        
+    }
+}
