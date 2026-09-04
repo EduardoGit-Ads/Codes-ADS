@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner ler = new Scanner (System.in);
+        int num1;                                          // num = inteiro
+        System.out.println("Qual é seu número?: ");     //Escreva "Digite um número"
+        num1 = ler.nextInt();                              //leia num1
+        if (num1%2==0){                                    //se(num1%2==0) então
+            System.out.println("Esse número é Par!");   //escreva "Par"
+
+        }
+        else                                               //senão
+            System.out.println("Esse número é Ímpar"); //escreva ímpar
+        ler.close();
+    }
+}
