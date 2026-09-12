@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class ex2 {
+    public static void main(String[] args) throws Exception {
+        Scanner ler = new Scanner(System.in);
+        int numero;
+        System.out.print("Digite o numero que deseja a tabuada: \n");
+        numero = ler.nextInt();
+        for(int i = 1;i <=10;i++){
+
+            System.out.println(i+ " X " + numero + " = " + (numero*i));
+        }
+    }
