@@ -1,0 +1,64 @@
+import java.util.*;
+
+public class Ex6 {
+    public static void main(String[] args) throws Exception {
+        Scanner ler = new Scanner(System.in);
+        Random random = new Random();
+
+        int dado1, dado2, dado1_computado, dado2_computador, pontos_jogador, pontos_computador, pontos_maximos, soma_dados, soma_dados_computador;
+        String jogo;
+        
+        pontos_maximos = 20;
+        pontos_jogador = 0;
+        pontos_computador = 0;
+
+        while(pontos_jogador < 20|| pontos_computador < 20){
+        dado1 = random.nextInt(6) +1;
+        dado2 = random.nextInt(6) +1;
+        
+
+        System.out.println("Escreva Lançar para Lançar os dado: ");
+        jogo = ler.nextLine();
+        if (jogo.equalsIgnoreCase("Lançar")){
+            System.out.print("O valor do dado 1 é: " + dado1 + "\nO valor do dado 2 é: " + dado2 );
+        }
+        System.out.println("A soma dos seus dados são: " + dado1 + " e " + dado2 + " = " + (dado1 + dado2));
+        soma_dados = dado1 + dado2;
+        if (soma_dados > 10){
+            pontos_jogador = pontos_jogador + 3;
+        } else if (soma_dados >= 7){
+            pontos_jogador = pontos_jogador + 1;
+        }
+        
+        System.out.println("Seus pontos atuais são: " + pontos_jogador);
+
+        System.out.println("O computador tirou esses dados");
+        dado1_computado = random.nextInt(6) +1;
+        dado2_computador = random.nextInt(6) +1;
+        System.out.println("A soma dos dados do computador são: " + dado1_computado + " e " + dado2_computador + " = " + (dado1_computado + dado2_computador));
+        soma_dados_computador = dado1_computado + dado2_computador;
+        if (soma_dados_computador > 10){
+            pontos_computador = pontos_computador + 3;
+        } else if (soma_dados_computador >= 7){
+            pontos_computador = pontos_computador + 1;
+        }
+        System.out.println("Os pontos atuais do computador são: " + pontos_computador);
+
+        if (pontos_computador == pontos_maximos){
+            System.out.println("O computador ganhou e você perdeu, tente novamente.");
+        }
+        else if (pontos_jogador == pontos_maximos && pontos_computador == pontos_maximos){
+            System.out.println("O jogo empatou!!!");
+
+        }
+        else if (pontos_jogador == pontos_maximos){
+            System.out.println("Parabéns, você ganhou!!!");
+        }
+    
+        }
+    
+        ler.close();
+        }
+        
+    }
+    
